@@ -1,0 +1,18 @@
+# IntelliJ
+.idea/
+*.iml
+
+# Java / Spring Boot
+Backend/target/
+
+# React / Node
+Frontend/node_modules/
+Frontend/dist/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
