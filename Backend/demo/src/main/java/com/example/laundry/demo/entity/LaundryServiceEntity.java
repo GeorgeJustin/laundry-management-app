@@ -1,3 +1,4 @@
+
 package com.example.laundry.demo.entity;
 
 import jakarta.persistence.*;
@@ -19,6 +20,9 @@ public class LaundryServiceEntity {
 
     @Column(nullable = false, precision = 10, scale = 2)
     private BigDecimal price;
+
+    @Column(nullable = false, length = 10)
+    private String pricingUnit = "ITEM";
 
     public LaundryServiceEntity() {
     }
@@ -48,6 +52,10 @@ public class LaundryServiceEntity {
         return price;
     }
 
+    public String getPricingUnit() {
+        return pricingUnit;
+    }
+
     public void setId(Long id) {
         this.id = id;
     }
@@ -62,5 +70,9 @@ public class LaundryServiceEntity {
 
     public void setPrice(BigDecimal price) {
         this.price = price;
+    }
+
+    public void setPricingUnit(String pricingUnit) {
+        this.pricingUnit = pricingUnit;
     }
 }

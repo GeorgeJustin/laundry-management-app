@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react'
 import './App.css'
-
+import Orders from './components/Orders'
 const API_URL = 'http://localhost:8081/api/services'
 const CUSTOMER_API_URL = 'http://localhost:8081/api/customers'
 
@@ -805,10 +805,7 @@ function App() {
             )}
 
             {activePage === 'orders' && (
-                <section className="services-card">
-                  <h1>Orders</h1>
-                  <p>Order management will be implemented in the next phase.</p>
-                </section>
+                <Orders services={services} />
             )}
           </section>
         </main>
